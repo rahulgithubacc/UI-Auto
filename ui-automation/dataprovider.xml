@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite for Dataprovider">
+    <parameter name="firstname" value="Rahul"></parameter>
+    <parameter name="lastname" value="Deshmukh"></parameter>
+    <test verbose="2" preserve-order="true"
+          name="F:/learning/ui-auto/src/test/java/com/learning/smoketest/DataProviderExampleXML.java">
+        <classes>
+            <class name="com.learning.smoketest.DataProviderExampleXML">
+
+            </class>
+        </classes>
+    </test>
+</suite>
