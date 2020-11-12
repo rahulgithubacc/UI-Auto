@@ -1,5 +1,6 @@
 package com.learning.smoketest;
 
+import com.learning.util.PropertyUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,13 +8,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.Properties;
+
 public class ShoppingCartLogin {
     WebDriver driver;
     @BeforeTest
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
         driver= new ChromeDriver();
-        driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+        String appUrl = PropertyUtil.getProperty("appURL");
+        System.out.println("App URL:"+ appUrl);
+        driver.get(appUrl);
     }
     @Test
     public void login() {
